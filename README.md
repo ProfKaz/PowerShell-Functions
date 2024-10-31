@@ -39,4 +39,7 @@ Here are some PowerShell-specific activity samples based on my expertise and foc
    - Structuring scripts to capture detailed logs for compliance and troubleshooting
 
 Each of these activities highlights how you use PowerShell to achieve efficient automation, data governance, and compliance in enterprise environments. Let me know if you'd like any additional detail on these!
+<br>
+
+You can start browsing these LEGO pieces [here!](/Lego)
 <br><br>
