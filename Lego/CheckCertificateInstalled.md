@@ -29,6 +29,9 @@ To ensure compatibility across different OS languages, you can use the following
   ```
 
 Using these options avoids potential language-related issues, ensuring the function works consistently across various OS language settings.
+
+This function returns `True` if the provided thumbprint matches any locally installed certificates under either `CurrentUser` or `LocalMachine`. Here’s how I use this function:
+- $status = CheckCertificateInstalled -thumbprint $CertificateThumb
 <br><br>
 
 ```powershell
