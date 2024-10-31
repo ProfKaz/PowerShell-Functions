@@ -1,5 +1,10 @@
 # PowerShell Learning Approach
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/a951c403-f2fa-4f3f-a4e8-2cf551f96309" width="300"></p>
+<p align="center">PowerShell as LEGO</p>
 <br>
+
 Throughout my journey in mastering PowerShell, I’ve developed a unique approach to streamline my workflow by breaking down complex tasks into modular, reusable functions. Much like assembling LEGO pieces, this method allows me to easily combine specific functions to construct any solution I need. This strategy not only accelerates development but also fosters a structured approach that scales well with diverse project requirements.
 <br><br>
 
