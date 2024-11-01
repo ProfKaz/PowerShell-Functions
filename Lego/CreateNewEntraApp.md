@@ -1,11 +1,10 @@
 # Function to create a Microsoft Entra App
 
-To automate certain activities, the normal way is use a Service Principal instead of an account, in that case through API permissions we are able to permit different kind of activities, the next function permit to create this kind of Service Principal, commonly known as Microsoft Entra Application.
-In the sample function below I'm adding Microsoft Graph API application permissions correspondign to:
-- User.Read as Delegated : This is by default
-- User.Read.All as Application
-- Group.ReadWrite.All as Application
-- Directory.Read.All as Application
+To automate specific tasks, using a Service Principal is preferred over a user account. With API permissions, this approach allows various activities to be performed securely. The following function creates a Service Principal, commonly referred to as a Microsoft Entra Application, with specified Microsoft Graph API permissions:
+- `User.Read` as Delegated (default)
+- `User.Read.All` as Application
+- `Group.ReadWrite.All` as Application
+- `Directory.Read.All` as Application
 
 
 <p align="center">
@@ -13,10 +12,10 @@ In the sample function below I'm adding Microsoft Graph API application permissi
 <p align="center">How to identify API Id and Permission Id</p>
 <br>
 
-To work in an unattended way with this kind of Microsoft Entra Application normally exist 2 common ways to connect, one is setting a `Secret Key`and the other one is through a `Certificate thumbprint` in this function we can find some lines that create that certificate, install the certificate locally, import the certificate under the Microsoft Entra Application and update an existing [Configuration file](/CreateConfigFile.md)
+For unattended access, Microsoft Entra applications typically use one of two authentication methods: a `Secret Key` or a `Certificate Thumbprint`. This function includes steps to generate a certificate, install it locally, associate it with the Microsoft Entra Application, and update the existing configuration file. [Configuration file](/CreateConfigFile.md)
 
 > [!IMPORTANT]
-> The permissions granted at Microsoft Entra requires a last step by a Global Admin user, who need to grant access permissions to the APIs set in our Microsot Entra App.
+> Permissions granted in Microsoft Entra require final approval from a Global Admin, who must grant access permissions to the APIs specified in the Microsoft Entra Application.
 
 ```powershell
 function CreateNewEntraApp
