@@ -12,7 +12,7 @@ To automate specific tasks, using a Service Principal is preferred over a user a
 <p align="center">How to identify API Id and Permission Id</p>
 <br>
 
-For unattended access, Microsoft Entra applications typically use one of two authentication methods: a `Secret Key` or a `Certificate Thumbprint`. This function includes steps to generate a certificate, install it locally, associate it with the Microsoft Entra Application, and update the existing configuration file. [Configuration file](/CreateConfigFile.md)
+For unattended access, Microsoft Entra applications typically use one of two authentication methods: a `Secret Key` or a `Certificate Thumbprint`. This function includes steps to generate a certificate, install it locally, associate it with the Microsoft Entra Application, and update the existing configuration file. [Configuration file](CreateConfigFile.md)
 
 > [!IMPORTANT]
 > Permissions granted in Microsoft Entra require final approval from a Global Admin, who must grant access permissions to the APIs specified in the Microsoft Entra Application.
@@ -130,3 +130,4 @@ function CreateNewEntraApp
     Remove-Variable certBase64
 }
 ```
+<br><br>
