@@ -1,6 +1,6 @@
 # Function to create a self-sign certificate for Code Signin
 
-This function normally is called from another function to create a local certificate that is installed under Current User (`Cert:\CurrentUser\My"`) profile, nevertheless, this function can be changed to create the certificates as Local Machine (`Cert:\LocalMachine\My`).
+This function is typically invoked by another function to generate a local certificate, which is then installed under the 'Current User' profile (`Cert:\CurrentUser\My`). However, it can be modified to create certificates under the 'Local Machine' profile (`Cert:\LocalMachine\My`) if needed.
 
 ```powershell
 function CreateCodeSigningCertificate
