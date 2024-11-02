@@ -26,7 +26,7 @@ To ensure compatibility across different OS languages, you can use the following
 >[!IMPORTANT]
 >By default, the function checks certificates in `Cert:\CurrentUser\My`, which lists certificates installed for the current user. However, certificates can also be installed at the machine level, in which case the location should be `Cert:\LocalMachine\My`.
 
->[!NOTES]
+>[!NOTE]
 >In the code we can see that the function will sign the file called `MyMainScript.ps1`, nevertheless, we can use wildcards like as `*.ps1` to get all the script files to be signed.
 
 ```powershell
