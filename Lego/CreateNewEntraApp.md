@@ -17,6 +17,9 @@ For unattended access, Microsoft Entra applications typically use one of two aut
 > [!IMPORTANT]
 > Permissions granted in Microsoft Entra require final approval from a Global Admin, who must grant access permissions to the APIs specified in the Microsoft Entra Application.
 
+> [!IMPORTANT]
+> If the **configuration file** doesn't exist the same script call the function called `CreateConfigFile` to create the configuration fila that will be used.
+
 ```powershell
 function CreateNewEntraApp
 {
@@ -31,11 +34,11 @@ function CreateNewEntraApp
 	$json = Get-Content -Raw -Path $CONFIGFILE
 	[PSCustomObject]$config = ConvertFrom-Json -InputObject $json
 	
-    $appName = "Microsoft Entra Groups"
-    Get-MgApplication -ConsistencyLevel eventual -Count appCount -Filter "startsWith(DisplayName, 'Microsoft Entra Groups')" | Out-Null
+    $appName = "Microsoft Entra Application"
+    Get-MgApplication -ConsistencyLevel eventual -Count appCount -Filter "startsWith(DisplayName, '$appName')" | Out-Null
     if ($appCount -gt 0)
     {   
-        Write-Host "'Microsoft Entra Groups' app already exists.`n"
+        Write-Host "'$appName' app already exists.`n"
 		Exit
     }
 
