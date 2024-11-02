@@ -38,3 +38,4 @@ function SelfSign
 	Set-AuthenticodeSignature -FilePath ".\$($MainScript.Name)" -Certificate $cert
 }
 ```
+<br><br>
