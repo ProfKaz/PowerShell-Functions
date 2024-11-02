@@ -1,14 +1,14 @@
 # Function to connect to Microsoft Graph API manually or automatically
 
-Use this function to connect to the Microsoft Graph API, either via a `ManualConnection` or through a [Microsoft Entra App](Lego/CreateNewEntraApp.md), where connection details are stored in a [Config File](Lego/CreateConfigFile.md). For `ManualConnection`, ensure the necessary scopes are specified for your tasks; this function currently uses the following scopes:
+Use this function to connect to the Microsoft Graph API, either via a `ManualConnection` or through a [Microsoft Entra App](CreateNewEntraApp.md), where connection details are stored in a [Config File](CreateConfigFile.md). For `ManualConnection`, ensure the necessary scopes are specified for your tasks; this function currently uses the following scopes:
 - `Group.ReadWrite.All`
 - `Directory.ReadWrite.All`
 - `User.Read.All`
 
-If connecting via a  [Microsoft Entra Application](Lego/CreateNewEntraApp.md), set the required API permissions within the app configuration.
+If connecting via a  [Microsoft Entra Application](CreateNewEntraApp.md), set the required API permissions within the app configuration.
 
 > [!NOTE]
-> When running the script with `.\MyScript.ps1` to establish an automatic connection, if the configuration file is missing, you’ll receive a message indicating that you can run the script with an attribute to create a [Microsoft Entra Application](Lego/CreateNewEntraApp.md). Remember set this function in your script.
+> When running the script with `.\MyScript.ps1` to establish an automatic connection, if the configuration file is missing, you’ll receive a message indicating that you can run the script with an attribute to create a [Microsoft Entra Application](CreateNewEntraApp.md). Remember set this function in your script.
 
 ```powershell
 function Connect2MicrosoftGraphService
