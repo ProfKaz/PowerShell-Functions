@@ -18,6 +18,8 @@ The following functions from the 'Lego' folder were utilized:
 - [ValidateUPNInCSVFIle](/Lego/ValidateUPNInCSVFIle.md)
 - [ValidateExistingGroupField](/Lego/ValidateExistingGroupField.md)
 - [ValidateIfCSVisOpenByAnotherApp](/Lego/ValidateIfCSVisOpenByAnotherApp.md)
+- [Update-ExistingGroup](/LegoPlus/Microsoft%20Entra/Update-ExistingGroup.md)
+- [CreateMicrosoftEntraGroup](/LegoPlus/Microsoft%20Entra/CreateMicrosoftEntraGroup.md)
 
 <details>
 <summary>You can find the complete script here</summary>
