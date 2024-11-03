@@ -16,7 +16,8 @@ The following functions from the 'Lego' folder were utilized:
 - [CreateCSVFile](/Lego/CreateCSVFile.md)
 - [CheckConfigurationFileAvailable](/Lego/CheckConfigurationFileAvailable.md)
 - [ValidateUPNInCSVFIle](/Lego/ValidateUPNInCSVFIle.md)
-
+- [ValidateExistingGroupField](/Lego/ValidateExistingGroupField.md)
+- [ValidateIfCSVisOpenByAnotherApp](/Lego/ValidateIfCSVisOpenByAnotherApp.md)
 
 <details>
 <summary>You can find the complete script here</summary>
