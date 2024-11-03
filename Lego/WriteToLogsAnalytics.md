@@ -4,7 +4,7 @@ This function exports data stored in a variable in JSON format and sends it to a
 To use this function, simply pass a `TableName` and an array containing the data in JSON format.
 Sample way to use:
 ```powershell
-WriteToLogsAnalytics -LogAnalyticsTableName $DLPRuleTableName -body $TotalResults
+WriteToLogsAnalytics -LogAnalyticsTableName $TableName -body $TotalResults
 ```
 
 ```powershell
