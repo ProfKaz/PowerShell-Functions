@@ -1023,9 +1023,6 @@ function CreateMicrosoftEntraGroup([array]$MembershipGroup, $GroupName, $GroupTy
 		$GroupID = $newGroup.Id
 		Return $GroupID
 	}
-    # Save updated CSV file
-    #$groups | Export-Csv -Path $ConfigurationFile -NoTypeInformation
-    #Write-Host "CSV file updated successfully." -ForegroundColor Green
 }
 
 # Identify the main configuration based on the CSV file
