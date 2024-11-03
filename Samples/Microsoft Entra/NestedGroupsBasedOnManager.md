@@ -4,7 +4,26 @@ I developed this script based on a customer requirement. During discussions abou
 
 The following functions from the 'Lego' folder were utilized:
 - [CheckIfElevated](/Lego/CheckIfElevated.md)
-- 
+- [CheckPowerShellVersion](/Lego/CheckPowerShellVersion.md)
+- [CheckRequiredModules](/Lego/CheckRequiredModules.md)
+- [CreateConfigFile](/Lego/CreateConfigFile.md)
+- [CheckCertificateInstalled](/Lego/CheckCertificateInstalled.md)
+- [CreateNewEntraApp](/Lego/CreateNewEntraApp.md)
+- [CreateCodeSigningCertificate](/Lego/CreateCodeSigningCertificate.md)
+- [SelfSign](/Lego/SelfSign)
+- [CreateTaskSchedulerTask](/Lego/CreateTaskSchedulerTask.md)
+- [Connect2MicrosoftGraphService](/Lego/Connect2MicrosoftGraphService.md)
+- [CreateCSVFile](/Lego/CreateCSVFile.md)
+- [CheckConfigurationFileAvailable](/Lego/CheckConfigurationFileAvailable.md)
+
+
+
+<details>
+<summary>You can find the complete script here</summary>
+
+Additional helper functions are available, such as `ShowHelpMenu`, which provides guidance on using the complete script, and `CSVHelp`, which assists in populating the CSV file.
+
+
 
 ```powershell
 <#PSScriptInfo
@@ -1219,4 +1238,5 @@ $CSVFile = Import-Csv -Path $ConfigurationFile
 MainScript
 
 ```
+</details>
 <br><br>
