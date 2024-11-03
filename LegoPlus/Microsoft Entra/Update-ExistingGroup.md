@@ -2,6 +2,9 @@
 
 Using Microsoft Graph API, this function permit to update an existing group under Microsoft Entra using the Group ID as identity, adding users from an Array that contains Users Ids.
 
+> [!WARNING]
+> This function uses `Microsoft Graph API`
+
 ```powershell
 function Update-ExistingGroup($GroupId, $GroupDescription, $GroupType, [array]$MembershipGroup)
 {
