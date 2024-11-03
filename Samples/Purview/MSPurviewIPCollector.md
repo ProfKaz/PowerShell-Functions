@@ -1,4 +1,9 @@
-# Script solution to identify nested direct reports across multiple levels.
+# Script solution to get Microsoft Purview Information Protection configuration
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3002d585-f35e-4c08-bb06-a4998e080ff4" width="600"></p>
+<p align="center">Power BI report based on data collected in Logs Analytics</p>
+<br>
 
 I developed this script to simplify the way to delivery a Microsoft Purview Information Protection Assessment. This script permit to collect Sensitivity Labels and Labes Policies, the information is exported automatically in Json format, nevertheless can be exported to CSV or Logs Analytics.
 
