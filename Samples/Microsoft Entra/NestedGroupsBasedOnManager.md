@@ -15,7 +15,7 @@ The following functions from the 'Lego' folder were utilized:
 - [Connect2MicrosoftGraphService](/Lego/Connect2MicrosoftGraphService.md)
 - [CreateCSVFile](/Lego/CreateCSVFile.md)
 - [CheckConfigurationFileAvailable](/Lego/CheckConfigurationFileAvailable.md)
-
+- [ValidateUPNInCSVFIle](/Lego/ValidateUPNInCSVFIle.md)
 
 
 <details>
