@@ -29,6 +29,7 @@ function CreateConfigFile
     }else
 	{
 		Write-Host "Configuration file is available under ConfigFiles folder"
+		return
 	}
 	
 	$config | ConvertTo-Json | Out-File "$configfile"
