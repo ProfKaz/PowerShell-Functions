@@ -12,7 +12,7 @@ function connect2PurviewService
 	<#
 	.NOTES
 	If you cannot add the "Compliance Administrator" role to the Microsoft Entra App, for security reasons, you can execute with "Compliance Administrator" role 
-	this script using .\MPARR-PurviewRoles.ps1 -ManualConnection
+	this script using .\YourScript.ps1 -ManualConnection
 	#>
 	if($ManualConnection)
 	{
