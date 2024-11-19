@@ -6,7 +6,7 @@ This function utilizes the `Office 365 Exchange Online API`, enabling the execut
 > To use this API, the service principal must have the necessary admin permissions for the cmdlets being executed.
 
 ```powershell
-function connect2service
+function connect2PurviewService
 {	
 	ValidateConfigurationFile	
 	<#
