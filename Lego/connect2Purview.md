@@ -17,7 +17,7 @@ function connect2service
 	if($ManualConnection)
 	{
 		Write-Host "`nAuthentication is required, please check your browser" -ForegroundColor Green
-		Connect-IPPSSession -UseRPSSession:$false 
+		Connect-IPPSSession -UseRPSSession:$false -ShowBanner:$false
 	}else
 	{
 		$CONFIGFILE = "$PSScriptRoot\ConfigFiles\laconfig.json"
@@ -36,7 +36,7 @@ function connect2service
 		
 		if($status -eq "True")
 		{
-			Connect-IPPSSession -CertificateThumbPrint $CertificateThumb -AppID $AppClientID -Organization $OnmicrosoftTenant 
+			Connect-IPPSSession -CertificateThumbPrint $CertificateThumb -AppID $AppClientID -Organization $OnmicrosoftTenant -ShowBanner:$false
 		}else
 		{
 			Write-Host "`nThe Certificate set in laconfig.json don't match with the certificates installed on this machine, you can try to execute using manual connection, to do that extecute: "
