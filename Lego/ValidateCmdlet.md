@@ -20,7 +20,7 @@ function CheckContentExplorerPermissions
 
 Here another example to validate if you have the cmdlets required to Connecto to Microsoft Graph and Microsoft Exhange Online.
 
-```powershel
+```powershell
 function ValidateConnectsCmdlets
 {
 	$NotPassed = 0
