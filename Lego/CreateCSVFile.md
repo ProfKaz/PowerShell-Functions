@@ -5,17 +5,13 @@ The following function creates a CSV file named `ManagerGroupsMatrix.csv` in a f
 ```powershell
 function CreateCSVFile
 {
-	$PathFolder = $PSScriptRoot+"\ConfigFiles"
-	
 	if(-not (Test-Path -Path $PathFolder))
 	{
 		New-Item -ItemType Directory -Force -Path "$PSScriptRoot\ConfigFiles" | Out-Null
 	}
-	# Define the CSV file path
-    $csvFilePath = $PSScriptRoot+"\ConfigFiles\ManagerGroupsMatrix.csv"
 	
 	# Check if the CSV file already exists
-    if (-Not (Test-Path $csvFilePath))
+        if (-Not (Test-Path $ConfigurationFile))
 	{
 		# Create a CSV structure
 		$ManagerUPN = "YourManagerUserPrincipalName@yourdomain.com"
@@ -25,7 +21,7 @@ function CreateCSVFile
 		$NewGroup = "Set the name of your new group"
 		$GroupDescription = "Set your group description"
 		$GroupType = "Use 'security' or 'microsoft365'"
-		$data = @{
+		[pscustomobject]$data = [ordered]@{
 			ManagerUPN		= $ManagerUPN
 			IncludeManager	= $IncludeManager #Include the manager in the same group or not
 			ManagerAsOwner	= $ManagerAsOwner #Set manager as a group Owner
@@ -36,22 +32,9 @@ function CreateCSVFile
 			ExistingGroup	= $ExistingGroup
 			RecursionDepth	= $RecursionDepth
 		}
-		
-		# Create a custom object with a defined order of properties
-		$SortedCSV = [pscustomobject]@{
-			ManagerUPN		= $data.ManagerUPN
-			IncludeManager	= $data.IncludeManager #Include the manager in the same group or not
-			ManagerAsOwner	= $data.ManagerAsOwner #Set manager as a group Owner
-			GroupOwner		= $data.GroupOwner #Set a group Owner
-			NewGroup		= $data.NewGroup
-			GroupDescription= $data.GroupDescription
-			GroupType		= $data.GroupType
-			ExistingGroup	= $data.ExistingGroup
-			RecursionDepth	= $data.RecursionDepth
-		}
 		# If file does not exist, create it with headers
-		$SortedCSV | Export-Csv -Path $csvFilePath -NoTypeInformation
-		Write-Host "Created new CSV file: $csvFilePath"
+		$data | Export-Csv -Path $ConfigurationFile -NoTypeInformation
+		Write-Host "Created new CSV file: $ConfigurationFile"
     } else
 	{
 		# If file exists, append new data
