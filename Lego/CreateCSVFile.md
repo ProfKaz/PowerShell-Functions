@@ -21,7 +21,7 @@ function CreateCSVFile
 		$NewGroup = "Set the name of your new group"
 		$GroupDescription = "Set your group description"
 		$GroupType = "Use 'security' or 'microsoft365'"
-		[pscustomobject]$data = [ordered]@{
+		$data = [pscustomobject][ordered]@{
 			ManagerUPN		= $ManagerUPN
 			IncludeManager	= $IncludeManager #Include the manager in the same group or not
 			ManagerAsOwner	= $ManagerAsOwner #Set manager as a group Owner
