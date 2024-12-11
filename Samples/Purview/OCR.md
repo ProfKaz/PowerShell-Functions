@@ -1,7 +1,35 @@
 # Script to use Azure AI services for OCR
 
-Today, Azure AI services provide powerful OCR capabilities for processing images and PDFs. In this exercise, I am using version 3.2, which supports only image-based OCR. However, version 4, currently in preview, introduces the ability to work directly with PDFs, offering even greater flexibility.  
+Today, Azure AI services provide powerful OCR capabilities for processing images and PDFs. In this exercise, I am using version 3.2, which supports only image-based OCR. However, version 4, currently in preview, introduces the ability to work directly with PDFs, offering even greater flexibility. 
 
+## Configuring Azure AI Services
+
+Follow the next images to quick setup Azure AI Services - Computer Vision.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/99353835-d597-4c72-8d6a-1ac20805a752" width="650"></p>
+<p align="center">Search for Azure AI Services</p>
+<br>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/32e7dc74-e7d8-44ef-a3ce-0425ed146a2d"></p>
+<p align="center">Select Computer Vision</p>
+<br>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3e12925f-cab5-4209-a952-9a4320c79c92"></p>
+<p align="center">It's available a Tier 0 as free to test</p>
+<br>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/56e8459f-2344-4f9f-a983-5ac86096d858"></p>
+<p align="center">At Overview you'll able to get the URL and the Key required.</p>
+<br>
+
+<details>
+<summary>You can find the complete script here</summary>
+
+ 
 ```powershell
 # Configuration
 
@@ -194,3 +222,6 @@ function MainFunction
 ScriptVariables
 MainFunction
 ```
+</details>
+
+<br><br>
