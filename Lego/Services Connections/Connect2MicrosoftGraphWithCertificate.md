@@ -6,7 +6,7 @@ To connect to Microsoft Graph API exist 3 common methods:
 - Theough Invoke using a certificate
 
 This function show how to reach the 3rd option using a certificate, this certificate needs to be installed locally and added in a [Service Principal](../CreateNewEntraApp.md) previously created.
-The script uses the variable `$CertThumbprint` that needs to be previosuly set, through a [general variable](../ScriptVariables) or read it from a [Configuration File](../CreateConfigFile.md).
+The script uses the variable `$CertThumbprint` that needs to be previosuly set, through a [general variable](../ScriptVariables.md) or read it from a [Configuration File](../CreateConfigFile.md).
 <br>
 
 ```powershell
