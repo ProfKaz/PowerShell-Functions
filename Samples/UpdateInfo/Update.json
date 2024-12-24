@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "version": "1.0.0",
+      "changes": "Initial release",
+      "directory": "ConfigFiles",
+      "URI": "ESample/ConfigFiles/example.json",
+      "file": "sample.ps1",
+      "format": "ps1"
+    },
+    {
+      "version": "1.0.0",
+      "changes": "Initial release",
+      "directory": "ROOT",
+      "URI": "ESample/ConfigFiles/example.json",
+      "file": "sample2.ps1",
+      "format": "ps1"
+    }
+  ]
+}
