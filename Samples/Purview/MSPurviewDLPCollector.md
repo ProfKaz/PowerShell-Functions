@@ -68,10 +68,10 @@ This script permit to export Information Protection configuration
 
 <#
 HISTORY
-	Script      : MSPurviewIPCollector.ps1
+	Script      : MSPurviewDLPCollector.ps1
 	Author      : S. Zamorano
 	Version     : 2.0.5
-	Description : Export Activity Explorer activities to CSV or Json format.
+	Description : Export DLP policies and rules to CSV or Json format.
 	17-04-2024		S. Zamorano		- Public release
 	12-08-2024		S. Zamorano		- Version 2 Public release
 	16-08-2024		S. Zamorano		- Conditions field added to the query
@@ -356,32 +356,32 @@ function MSPuviewIPCollectorHelp
 	Write-Host "################################################################################" -ForegroundColor Green
 	Write-Host "`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "This menu"
-	Write-Host ".\MSPurviewIPCollector.ps1 -Help" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1 -Help" -ForeGroundColor DarkYellow
 	Write-Host "`n`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "Using only the script by default, you'll be able to get your DLP Rules and Policies in Json format."
-	Write-Host ".\MSPurviewIPCollector.ps1" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1" -ForeGroundColor DarkYellow
 	Write-Host "`n`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "Using the attribute '-OnlyRules' you will be able only to export DLP information"
-	Write-Host ".\MSPurviewIPCollector.ps1 -OnlyRules" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1 -OnlyRules" -ForeGroundColor DarkYellow
 	Write-Host "`n`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "Using the attribute '-OnlyPolicies' you will be able only to export DLP Policies information"
-	Write-Host ".\MSPurviewIPCollector.ps1 -OnlyPolicies" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1 -OnlyPolicies" -ForeGroundColor DarkYellow
 	Write-Host "`n`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "Using the attribute '-ExportToLogsAnalytics' you will be able only to export all the data to a Logs Analytics workspace"
-	Write-Host ".\MSPurviewIPCollector.ps1 -ExportToLogsAnalytics" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1 -ExportToLogsAnalytics" -ForeGroundColor DarkYellow
 	Write-Host "`n`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "If you are not comfortable working with JSON format, you can use the attribute '-ExportToCsv' to export the data in CSV format."
-	Write-Host ".\MSPurviewIPCollector.ps1 -ExportToCsv" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1 -ExportToCsv" -ForeGroundColor DarkYellow
 	Write-Host "`n`nDescription: " -ForegroundColor Blue -NoNewLine
 	Write-Host "You can combine different attributes available in the script to customize its functionality. For example:"
-	Write-Host ".\MSPurviewIPCollector.ps1 -OnlyRules -ExportToLogsAnalytics" -ForeGroundColor DarkYellow
+	Write-Host ".\MSPurviewDLPCollector.ps1 -OnlyRules -ExportToLogsAnalytics" -ForeGroundColor DarkYellow
 	Write-Host "`n"
 	Write-Host "### You can now proceed using any of the options listed in the Help menu. ###" -ForegroundColor Green
 	Write-Host "`n"
 	return
 }
 
-function GetInformationProtectionData($ExportFormat, $ExportFolder, $ExportOption)
+function GetDataLossPreventionData($ExportFormat, $ExportFolder, $ExportOption)
 {
 	Write-Host "`nExecuting Get cmdlet for your selection..." -ForeGroundColor Blue
 	
@@ -521,7 +521,7 @@ function MainFunction
 	Clear-Host
 	
 	Write-Host "`n`n----------------------------------------------------------------------------------------"
-	Write-Host "`nWelcome to Information Protection Export script!" -ForegroundColor Green
+	Write-Host "`nWelcome to Data Loss Prevention Export script!" -ForegroundColor Green
 	Write-Host "This script will permit to collect data from DLP Rules and Policies related"
 	Write-Host "`n----------------------------------------------------------------------------------------" 
 	
@@ -605,7 +605,7 @@ function MainFunction
 	Write-Host "Calling script..."
 	
 	#Call function to export data from Activity Explorer
-	GetInformationProtectionData -ExportFormat $ExportFormat -ExportFolder $ExportFolderName -ExportOption $ExportOption
+	GetDataLossPreventionData -ExportFormat $ExportFormat -ExportFolder $ExportFolderName -ExportOption $ExportOption
 }
 
 if($Help)
