@@ -1,4 +1,4 @@
-# PowerShell **Lego** Learning Approach
+# PowerShell "Lego" Learning Approach
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/a951c403-f2fa-4f3f-a4e8-2cf551f96309" width="300"></p>
