@@ -39,7 +39,7 @@ function CheckCertificateInstalled($thumbprint)
 {
 	$var = "False"
 	$certificates = @(Get-ChildItem Cert:\CurrentUser\My | Where-Object {$_.EnhancedKeyUsageList -like "*Client Authentication*"}| Select-Object Thumbprint) 
-	#$thumbprint -in $certificates
+	
 	foreach($certificate in $certificates)
 	{
 		if($thumbprint -in $certificate.Thumbprint)
